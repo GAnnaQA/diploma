@@ -63,7 +63,7 @@ class authorization:
         cookies = self._driver.get_cookies()
         for c in cookies: 
             if c.get('name') == 'token_global':
-                return f'{c.get('name')}={c.get('value')}'
+                return f"{c.get('name')}={c.get('value')}"
         return None
 
 

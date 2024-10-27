@@ -124,8 +124,8 @@ def test_add_task_future_date():
     data = data_test()
     eventName = data.EventName()
     my_calendar.enter_event_name(eventName)
-    Date = data.tomorow_date()
-    my_calendar.enter_event_date(Date)
+    eventDate = data.tomorow_date()
+    my_calendar.enter_event_date(eventDate)
     my_calendar.click_save()
     result = my_calendar.search_event(eventName)
     with allure.step('Проверка, что событие отображается в календаре'):
